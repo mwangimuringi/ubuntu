@@ -15,10 +15,10 @@ export class Terminal extends Component {
             root: ["books", "projects", "personal-documents", "skills", "languages", "PDPU", "interests"],
             PDPU: ["Sem-6"],
             books: ["Eric-Jorgenson_The-Almanack-of-Naval-Ravikant.pdf", "Elon Musk: How the Billionaire CEO of SpaceX.pdf", "The $100 Startup_CHRIS_GUILLEBEAU.pdf", "The_Magic_of_Thinking_Big.pdf"],
-            skills: ["Front-end development", "React.js", "jQuery", "Flutter", "Express.js", "SQL", "Firebase"],
-            projects: ["vivek9patel-personal-portfolio", "synonyms-list-react", "economist.com-unlocked", "Improve-Codeforces", "flutter-banking-app", "Meditech-Healthcare", "CPU-Scheduling-APP-React-Native"],
-            interests: ["Software Engineering", "Deep Learning", "Computer Vision"],
-            languages: ["Javascript", "C++", "Java", "Dart"],
+            skills: ["Front-end development", "React.js", "jQuery", "Flutter", "Next.js", "SQL", "tailwindcss"],
+            projects: ["mwangi223-personal-portfolio", "Banking-System", "transport-management-module", "Improve-Codeforces", "coffee-cooperative-app", "MediLink-Healthcare", "CPU-Scheduling-APP-React-Native"],
+            interests: ["Computer Science", "Web Developer", "Android Developer"],
+            languages: ["Javascript", "C++", "Java", "C#"],
         };
         this.state = {
             terminal: [],
@@ -56,7 +56,7 @@ export class Terminal extends Component {
             <React.Fragment key={id}>
                 <div className="flex w-full h-5">
                     <div className="flex">
-                        <div className=" text-ubt-green">vivek@Dell</div>
+                        <div className=" text-ubt-green">julius@HP</div>
                         <div className="text-white mx-px font-medium">:</div>
                         <div className=" text-ubt-blue">{this.current_directory}</div>
                         <div className="text-white mx-px font-medium mr-1">$</div>
@@ -239,7 +239,7 @@ export class Terminal extends Component {
                 break;
             case "pwd":
                 let str = this.current_directory;
-                result = str.replace("~", "/home/vivek")
+                result = str.replace("~", "/home/julius")
                 break;
             case "code":
                 if (words[0] === "." || words.length === 0) {
@@ -279,9 +279,9 @@ export class Terminal extends Component {
                     result = "Command '" + main + "' not found, or not yet implemented.<br>Available Commands: [ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg ]";
                 }
                 break;
-            case "about-vivek":
+            case "about-julius":
                 if (words[0] === "." || words.length === 0) {
-                    this.props.openApp("about-vivek");
+                    this.props.openApp("about-julius");
                 } else {
                     result = "Command '" + main + "' not found, or not yet implemented.<br>Available Commands: [ cd, ls, pwd, echo, clear, exit, mkdir, code, spotify, chrome, about-vivek, todoist, trash, settings, sendmsg ]";
                 }

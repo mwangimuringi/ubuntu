@@ -19,9 +19,9 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@ubuntu
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@ubuntu
         with:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
@@ -41,7 +41,7 @@ jobs:
       - run: touch ./out/.nojekyll
 
       - name: Deploy to Github-Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+        uses: mwangi223/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: out # The folder the action should deploy.
