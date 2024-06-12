@@ -1,8 +1,8 @@
 {
-  "name": "mwangi223-portfolio",
+  "name": "mwangi-portfolio",
   "version": "2.0.0",
   "private": true,
-  "homepage": "https://mwangi223github.io/",
+  "homepage": "https://mwangimuringi.io/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
