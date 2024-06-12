@@ -55,24 +55,24 @@ export class AboutJulius extends Component {
         return (
             <>
                 <div id="about" tabIndex="0" onFocus={this.changeScreen} className={(this.state.active_screen === "about" ? " bg-ub-orange bg-opacity-100 hover:bg-opacity-95" : " hover:bg-gray-50 hover:bg-opacity-5 ") + " w-28 md:w-full md:rounded-none rounded-sm cursor-default outline-none py-1.5 focus:outline-none duration-100 my-0.5 flex justify-start items-center pl-2 md:pl-2.5"}>
-                    <img className=" w-3 md:w-4" alt="about vivek" src="./themes/Yaru/status/about.svg" />
-                    <span className=" ml-1 md:ml-2 text-gray-50 ">About Me</span>
+                    <img className="w-3 md:w-4" alt="about vivek" src="./themes/Yaru/status/about.svg" />
+                    <span className="ml-1 md:ml-2 text-gray-50">About Me</span>
                 </div>
                 <div id="education" tabIndex="0" onFocus={this.changeScreen} className={(this.state.active_screen === "education" ? " bg-ub-orange bg-opacity-100 hover:bg-opacity-95" : " hover:bg-gray-50 hover:bg-opacity-5 ") + " w-28 md:w-full md:rounded-none rounded-sm cursor-default outline-none py-1.5 focus:outline-none duration-100 my-0.5 flex justify-start items-center pl-2 md:pl-2.5"}>
-                    <img className=" w-3 md:w-4" alt="vivek' education" src="./themes/Yaru/status/education.svg" />
-                    <span className=" ml-1 md:ml-2 text-gray-50 ">Education</span>
+                    <img className="w-3 md:w-4" alt="vivek' education" src="./themes/Yaru/status/education.svg" />
+                    <span className="ml-1 md:ml-2 text-gray-50">Education</span>
                 </div>
                 <div id="skills" tabIndex="0" onFocus={this.changeScreen} className={(this.state.active_screen === "skills" ? " bg-ub-orange bg-opacity-100 hover:bg-opacity-95" : " hover:bg-gray-50 hover:bg-opacity-5 ") + " w-28 md:w-full md:rounded-none rounded-sm cursor-default outline-none py-1.5 focus:outline-none duration-100 my-0.5 flex justify-start items-center pl-2 md:pl-2.5"}>
-                    <img className=" w-3 md:w-4" alt="vivek' skills" src="./themes/Yaru/status/skills.svg" />
-                    <span className=" ml-1 md:ml-2 text-gray-50 ">Skills</span>
+                    <img className="w-3 md:w-4" alt="vivek' skills" src="./themes/Yaru/status/skills.svg" />
+                    <span className="ml-1 md:ml-2 text-gray-50">Skills</span>
                 </div>
                 <div id="projects" tabIndex="0" onFocus={this.changeScreen} className={(this.state.active_screen === "projects" ? " bg-ub-orange bg-opacity-100 hover:bg-opacity-95" : " hover:bg-gray-50 hover:bg-opacity-5 ") + " w-28 md:w-full md:rounded-none rounded-sm cursor-default outline-none py-1.5 focus:outline-none duration-100 my-0.5 flex justify-start items-center pl-2 md:pl-2.5"}>
-                    <img className=" w-3 md:w-4" alt="vivek' projects" src="./themes/Yaru/status/projects.svg" />
-                    <span className=" ml-1 md:ml-2 text-gray-50 ">Projects</span>
+                    <img className="w-3 md:w-4" alt="vivek' projects" src="./themes/Yaru/status/projects.svg" />
+                    <span className="ml-1 md:ml-2 text-gray-50">Projects</span>
                 </div>
                 <div id="resume" tabIndex="0" onFocus={this.changeScreen} className={(this.state.active_screen === "resume" ? " bg-ub-orange bg-opacity-100 hover:bg-opacity-95" : " hover:bg-gray-50 hover:bg-opacity-5 ") + " w-28 md:w-full md:rounded-none rounded-sm cursor-default outline-none py-1.5 focus:outline-none duration-100 my-0.5 flex justify-start items-center pl-2 md:pl-2.5"}>
-                    <img className=" w-3 md:w-4" alt="vivek's resume" src="./themes/Yaru/status/download.svg" />
-                    <span className=" ml-1 md:ml-2 text-gray-50 ">Resume</span>
+                    <img className="w-3 md:w-4" alt="vivek's resume" src="./themes/Yaru/status/download.svg" />
+                    <span className="ml-1 md:ml-2 text-gray-50">Resume</span>
                 </div>
                 <div className='my-0.5 w-28 md:w-full h-8 px-2 md:px-2.5 flex' >
                     <iframe src="https://github.com/sponsors/vivek9patel/button" title="Sponsor vivek9patel" width={"100%"} height={"100%"} ></iframe>
@@ -83,11 +83,11 @@ export class AboutJulius extends Component {
 
     render() {
         return (
-            <div className="w-full h-full flex bg-ub-cool-grey text-white select-none relative">
-                <div className="md:flex hidden flex-col w-1/4 md:w-1/5 text-sm overflow-y-auto windowMainScreen border-r border-black">
+            <div className="relative flex w-full h-full text-white select-none bg-ub-cool-grey">
+                <div className="flex-col hidden w-1/4 overflow-y-auto text-sm border-r border-black md:flex md:w-1/5 windowMainScreen">
                     {this.renderNavLinks()}
                 </div>
-                <div onClick={this.showNavBar} className="md:hidden flex flex-col items-center justify-center absolute bg-ub-cool-grey rounded w-6 h-6 top-1 left-1">
+                <div onClick={this.showNavBar} className="absolute flex flex-col items-center justify-center w-6 h-6 rounded md:hidden bg-ub-cool-grey top-1 left-1">
                     <div className=" w-3.5 border-t border-white"></div>
                     <div className=" w-3.5 border-t border-white" style={{ marginTop: "2pt", marginBottom: "2pt" }}></div>
                     <div className=" w-3.5 border-t border-white"></div>
@@ -95,7 +95,7 @@ export class AboutJulius extends Component {
                         {this.renderNavLinks()}
                     </div>
                 </div>
-                <div className="flex flex-col w-3/4 md:w-4/5 justify-start items-center flex-grow bg-ub-grey overflow-y-auto windowMainScreen">
+                <div className="flex flex-col items-center justify-start flex-grow w-3/4 overflow-y-auto md:w-4/5 bg-ub-grey windowMainScreen">
                     {this.state.screen}
                 </div>
             </div>
@@ -113,22 +113,22 @@ export const displayAboutJulius = () => {
 function About() {
     return (
         <>
-            <div className="w-20 md:w-28 my-4 bg-white rounded-full">
+            <div className="w-20 my-4 bg-white rounded-full md:w-28">
                 <img className="w-full" src="./images/logos/bitmoji.png" alt="Julius Mwangi Logo" />
             </div>
-            <div className=" mt-4 md:mt-8 text-lg md:text-2xl text-center px-1">
+            <div className="px-1 mt-4 text-lg text-center md:mt-8 md:text-2xl">
                 <div>my name is <span className="font-bold">Julius Mwangi</span> ,</div>
-                <div className="font-normal ml-1">I'm a <span className="text-pink-600 font-bold">Frontend Developer!</span></div>
+                <div className="ml-1 font-normal">I'm a <span className="font-bold text-pink-600">Frontend Developer!</span></div>
             </div>
-            <div className=" mt-4 relative md:my-8 pt-px bg-white w-32 md:w-48">
+            <div className="relative w-32 pt-px mt-4 bg-white md:my-8 md:w-48">
                 <div className="bg-white absolute rounded-full p-0.5 md:p-1 top-0 transform -translate-y-1/2 left-0"></div>
                 <div className="bg-white absolute rounded-full p-0.5 md:p-1 top-0 transform -translate-y-1/2 right-0"></div>
             </div>
-            <ul className=" mt-4 leading-tight tracking-tight text-sm md:text-base w-5/6 md:w-3/4 emoji-list">
-                <li className=" list-pc">I'm a <span className=" font-medium">Graduate Student</span> currently pursuing Computer Science. I've completed my 6 month intern at <u className=' cursor-pointer '> <a href="https://en.wikipedia.org/wiki/HackerRank" target={"_blank"}>JHUB AFRICA</a> </u>, and now I'm looking for full-time frontend developer roles! ( Hit me up <a className='text-underline' href='mailto:vivek.p9737@gmail.com'><u>@vivek.p9737@gmail.com</u></a> :) )</li>
-                <li className=" mt-3 list-building"> I enjoy building awesome softwares that solve practical problems.</li>
-                <li className=" mt-3 list-time"> When I am not coding my next project, I like to spend my time reading books, playing monopoly or watching <a href="https://www.youtube.com/channel/UCBa659QWEk1AI4Tg--mrJ2A" target="_blank" rel="noreferrer"> Kevin Powell videos.</a></li>
-                <li className=" mt-3 list-star"> And I also have interest in Deep Learning & Computer Vision!</li>
+            <ul className="w-5/6 mt-4 text-sm leading-tight tracking-tight md:text-base md:w-3/4 emoji-list">
+                <li className=" list-pc">I'm a <span className="font-medium ">Graduate Student</span> currently pursuing Computer Science. I've completed my 6 month intern at <u className='cursor-pointer '> <a href="https://en.wikipedia.org/wiki/HackerRank" target={"_blank"}>JHUB AFRICA</a> </u>, and now I'm looking for full-time frontend developer roles! ( Hit me up <a className='text-underline' href='mailto:vivek.p9737@gmail.com'><u>@vivek.p9737@gmail.com</u></a> :) )</li>
+                <li className="mt-3 list-building"> I enjoy building awesome softwares that solve practical problems.</li>
+                <li className="mt-3 list-time"> When I am not coding my next project, I like to spend my time reading books, playing monopoly or watching <a href="https://www.youtube.com/channel/UCBa659QWEk1AI4Tg--mrJ2A" target="_blank" rel="noreferrer"> Kevin Powell videos.</a></li>
+                <li className="mt-3 list-star"> And I also have interest in Deep Learning & Computer Vision!</li>
             </ul>
         </>
     )
@@ -136,37 +136,37 @@ function About() {
 function Education() {
     return (
         <>
-            <div className=" font-medium relative text-2xl mt-2 md:mt-4 mb-4">
+            <div className="relative mt-2 mb-4 text-2xl font-medium md:mt-4">
                 Education
-                <div className="absolute pt-px bg-white mt-px top-full w-full">
+                <div className="absolute w-full pt-px mt-px bg-white top-full">
                     <div className="bg-white absolute rounded-full p-0.5 md:p-1 top-0 transform -translate-y-1/2 left-full"></div>
                     <div className="bg-white absolute rounded-full p-0.5 md:p-1 top-0 transform -translate-y-1/2 right-full"></div>
                 </div>
             </div>
-            <ul className=" w-10/12  mt-4 ml-4 px-0 md:px-1">
+            <ul className="w-10/12 px-0 mt-4 ml-4 md:px-1">
                 <li className="list-disc">
-                    <div className=" text-lg md:text-xl text-left font-bold leading-tight">
+                    <div className="text-lg font-bold leading-tight text-left md:text-xl">
                         Jomo Kenyatta University Of Agriculture and Technology
                     </div>
                     <div className=" text-sm text-gray-400 mt-0.5">2022 - 2026</div>
-                    <div className=" text-sm md:text-base">Computer Technology</div>
-                    <div className="text-sm text-gray-300 font-bold mt-1">GPA &nbsp; 4.0/4.0</div>
+                    <div className="text-sm md:text-base">Computer Technology</div>
+                    <div className="mt-1 text-sm font-bold text-gray-300">GPA &nbsp; 4.0/4.0</div>
                 </li>
                 <li className="list-disc">
-                    <div className=" text-lg md:text-xl text-left font-bold leading-tight">
+                    <div className="text-lg font-bold leading-tight text-left md:text-xl">
                        Moringa Technology School
                     </div>
                     <div className=" text-sm text-gray-400 mt-0.5">2021 - 2022</div>
-                    <div className=" text-sm md:text-base">Computer Engineering</div>
-                    <div className="text-sm text-gray-300 font-bold mt-1">CGPA &nbsp; 9.35/10</div>
+                    <div className="text-sm md:text-base">Computer Engineering</div>
+                    <div className="mt-1 text-sm font-bold text-gray-300">CGPA &nbsp; 9.35/10</div>
                 </li>
-                <li className="list-disc mt-5">
-                    <div className=" text-lg md:text-xl text-left font-bold leading-tight">
+                <li className="mt-5 list-disc">
+                    <div className="text-lg font-bold leading-tight text-left md:text-xl">
                         Grade 2<sup>th</sup> (GSEB)
                     </div>
                     <div className=" text-sm text-gray-400 mt-0.5">2016 - 2018</div>
-                    <div className=" text-sm md:text-base">Maths, Physics, Chemistry</div>
-                    <div className="text-sm text-gray-300 font-bold mt-1">Percentile Rank &nbsp; 94.1%</div>
+                    <div className="text-sm md:text-base">Maths, Physics, Chemistry</div>
+                    <div className="mt-1 text-sm font-bold text-gray-300">Percentile Rank &nbsp; 94.1%</div>
                 </li>
             </ul>
         </>
@@ -175,31 +175,31 @@ function Education() {
 function Skills() {
     return (
         <>
-            <div className=" font-medium relative text-2xl mt-2 md:mt-4 mb-4">
+            <div className="relative mt-2 mb-4 text-2xl font-medium md:mt-4">
                 Technical Skills
-                <div className="absolute pt-px bg-white mt-px top-full w-full">
+                <div className="absolute w-full pt-px mt-px bg-white top-full">
                     <div className="bg-white absolute rounded-full p-0.5 md:p-1 top-0 transform -translate-y-1/2 left-full"></div>
                     <div className="bg-white absolute rounded-full p-0.5 md:p-1 top-0 transform -translate-y-1/2 right-full"></div>
                 </div>
             </div>
-            <ul className=" tracking-tight text-sm md:text-base w-10/12 emoji-list">
-                <li className=" list-arrow text-sm md:text-base mt-4 leading-tight tracking-tight">
+            <ul className="w-10/12 text-sm tracking-tight md:text-base emoji-list">
+                <li className="mt-4 text-sm leading-tight tracking-tight list-arrow md:text-base">
                     I've worked with a wide variety of programming languages & frameworks.
                 </li>
-                <li className=" list-arrow text-sm md:text-base mt-4 leading-tight tracking-tight">
+                <li className="mt-4 text-sm leading-tight tracking-tight list-arrow md:text-base">
                     <div> My areas of expertise are <strong className="text-ubt-gedit-orange">front-end development and Java</strong></div>
                 </li>
-                <li className=" list-arrow text-sm md:text-base mt-4 leading-tight tracking-tight">
+                <li className="mt-4 text-sm leading-tight tracking-tight list-arrow md:text-base">
                     <div>Here are my most frequently used</div>
                 </li>
             </ul>
-            <div className="w-full md:w-10/12 flex mt-4">
-                <div className=" text-sm text-center md:text-base w-1/2 font-bold">Languages & Tools</div>
-                <div className=" text-sm text-center md:text-base w-1/2 font-bold">Frameworks & Libraries</div>
+            <div className="flex w-full mt-4 md:w-10/12">
+                <div className="w-1/2 text-sm font-bold text-center md:text-base">Languages & Tools</div>
+                <div className="w-1/2 text-sm font-bold text-center md:text-base">Frameworks & Libraries</div>
             </div>
-            <div className="w-full md:w-10/12 flex justify-center items-start font-bold text-center">
-                <div className="px-2 w-1/2">
-                    <div className="flex flex-wrap justify-center items-start w-full mt-2">
+            <div className="flex items-start justify-center w-full font-bold text-center md:w-10/12">
+                <div className="w-1/2 px-2">
+                    <div className="flex flex-wrap items-start justify-center w-full mt-2">
                         <img className="m-1" src="https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=flat&logo=javascript&logoColor=000000&labelColor=%23F7DF1C&color=%23FFCE5A" alt="vivek javascript" />
                         <img className="m-1" src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white" alt="vivek c++" />
                         <img className="m-1" src="http://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=ffffff" alt="vivek python" />
@@ -210,10 +210,10 @@ function Skills() {
                         <img src="https://img.shields.io/badge/-Firebase-FFCA28?style=flat&logo=firebase&logoColor=ffffff" alt="vivek firebase" className="m-1" />
                     </div>
                 </div>
-                <div className="px-2 flex flex-wrap items-start w-1/2">
-                    <div className="flex flex-wrap justify-center items-start w-full mt-2">
-                        <img className=" m-1" src="https://img.shields.io/badge/Next-black?style=flat&logo=next.js&logoColor=ffffff" alt="vivek next" />
-                        <img className=" m-1" src="https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=ffffff" alt="vivek react" />
+                <div className="flex flex-wrap items-start w-1/2 px-2">
+                    <div className="flex flex-wrap items-start justify-center w-full mt-2">
+                        <img className="m-1 " src="https://img.shields.io/badge/Next-black?style=flat&logo=next.js&logoColor=ffffff" alt="vivek next" />
+                        <img className="m-1 " src="https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=ffffff" alt="vivek react" />
                         <img className="m-1" src="https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white" alt="vivek flutter" />
                         <img className="m-1" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white" alt="vivek tailwind css" />
                         <img src="https://img.shields.io/badge/-Nodejs-339933?style=flat&logo=Node.js&logoColor=ffffff" alt="vivek node.js" className="m-1" />
@@ -222,9 +222,9 @@ function Skills() {
                     </div>
                 </div>
             </div>
-            <ul className=" tracking-tight text-sm md:text-base w-10/12 emoji-list mt-4">
-                <li className=" list-arrow text-sm md:text-base mt-4 leading-tight tracking-tight">
-                    <span> And of course,</span> <img className=" inline ml-1" src="http://img.shields.io/badge/-Linux-0078D6?style=plastic&logo=linux&logoColor=ffffff" alt="vivek linux" /> <span>!</span>
+            <ul className="w-10/12 mt-4 text-sm tracking-tight md:text-base emoji-list">
+                <li className="mt-4 text-sm leading-tight tracking-tight list-arrow md:text-base">
+                    <span> And of course,</span> <img className="inline ml-1 " src="http://img.shields.io/badge/-Linux-0078D6?style=plastic&logo=linux&logoColor=ffffff" alt="vivek linux" /> <span>!</span>
                 </li>
             </ul>
         </>
@@ -317,7 +317,7 @@ function Projects() {
         {
             name: "Cleanliness Automation",
             date: "Dec 2019",
-            link: "https://github.com/vivek9patel/CPU-Scheduling-APP-React-Native",
+            link: "https://github.com/mwangimuringi/CPU-Scheduling-APP-React-Native",
             description: [
                 "Developed Web Applications to automate Garbage collection and extraction systems for SSIP hackathon",
             ],
@@ -345,37 +345,37 @@ function Projects() {
 
     return (
         <>
-            <div className=" font-medium relative text-2xl mt-2 md:mt-4 mb-4">
+            <div className="relative mt-2 mb-4 text-2xl font-medium md:mt-4">
                 Projects
-                <div className="absolute pt-px bg-white mt-px top-full w-full">
+                <div className="absolute w-full pt-px mt-px bg-white top-full">
                     <div className="bg-white absolute rounded-full p-0.5 md:p-1 top-0 transform -translate-y-1/2 left-full"></div>
                     <div className="bg-white absolute rounded-full p-0.5 md:p-1 top-0 transform -translate-y-1/2 right-full"></div>
                 </div>
             </div>
-            <iframe src="https://github.com/sponsors/vivek9patel/card" title="Sponsor vivek9patel" className='my-4 w-5/6 md:w-3/4' ></iframe>
+            <iframe src="https://github.com/sponsors/mwangimuringi/card" title="Sponsor vivek9patel" className='w-5/6 my-4 md:w-3/4' ></iframe>
 
             {
                 project_list.map((project, index) => {
                     const projectNameFromLink = project.link.split('/')
                     const projectName = projectNameFromLink[projectNameFromLink.length - 1]
                     return (
-                        <a key={index} href={project.link} target="_blank" rel="noreferrer" className="flex w-full flex-col px-4">
-                            <div className="w-full py-1 px-2 my-2 border border-gray-50 border-opacity-10 rounded hover:bg-gray-50 hover:bg-opacity-5 cursor-pointer">
-                                <div className="flex flex-wrap justify-between items-center">
-                                    <div className='flex justify-center items-center'>
-                                        <div className=" text-base md:text-lg mr-2">{project.name.toLowerCase()}</div>
-                                        <iframe src={`https://ghbtns.com/github-btn.html?user=vivek9patel&repo=${projectName}&type=star&count=true`} frameBorder="0" scrolling="0" width="150" height="20" title={project.name.toLowerCase()+"-star"}></iframe>
+                        <a key={index} href={project.link} target="_blank" rel="noreferrer" className="flex flex-col w-full px-4">
+                            <div className="w-full px-2 py-1 my-2 border rounded cursor-pointer border-gray-50 border-opacity-10 hover:bg-gray-50 hover:bg-opacity-5">
+                                <div className="flex flex-wrap items-center justify-between">
+                                    <div className='flex items-center justify-center'>
+                                        <div className="mr-2 text-base md:text-lg">{project.name.toLowerCase()}</div>
+                                        <iframe src={`https://ghbtns.com/github-btn.html?user=mwangimuringi=${projectName}&type=star&count=true`} frameBorder="0" scrolling="0" width="150" height="20" title={project.name.toLowerCase()+"-star"}></iframe>
                                     </div>
-                                    <div className="text-gray-300 font-light text-sm">{project.date}</div>
+                                    <div className="text-sm font-light text-gray-300">{project.date}</div>
                                 </div>
-                                <ul className=" tracking-normal leading-tight text-sm font-light ml-4 mt-1">
+                                <ul className="mt-1 ml-4 text-sm font-light leading-tight tracking-normal ">
                                     {
                                         project.description.map((desc, index) => {
-                                            return <li key={index} className="list-disc mt-1 text-gray-100">{desc}</li>;
+                                            return <li key={index} className="mt-1 text-gray-100 list-disc">{desc}</li>;
                                         })
                                     }
                                 </ul>
-                                <div className="flex flex-wrap items-start justify-start text-xs py-2">
+                                <div className="flex flex-wrap items-start justify-start py-2 text-xs">
                                     {
                                         (project.domains ?
                                             project.domains.map((domain, index) => {
@@ -398,6 +398,6 @@ function Projects() {
 }
 function Resume() {
     return (
-        <iframe className="h-full w-full" src="./files/Vivek-Patel-Resume.pdf" title="vivek patel resume" frameBorder="0"></iframe>
+        <iframe className="w-full h-full" src="./files/Vivek-Patel-Resume.pdf" title="vivek patel resume" frameBorder="0"></iframe>
     )
 }
