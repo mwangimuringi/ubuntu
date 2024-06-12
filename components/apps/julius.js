@@ -279,9 +279,9 @@ function Projects() {
             domains: ["javascript", "chrome-extension"]
         },
         {
-            name: "Flutter banking app",
-            date: "Jan 2021",
-            link: "https://github.com/vivek9patel/flutter-banking-app",
+            name: "Mwananchi banking app",
+            date: "Jan 2023",
+            link: "https://github.com/mwangimuringi/mwananchi-banking-app",
             description: [
                 "A Flutter & Firebase project for creating transactions between different Users and displaying the history of transactions done by all.",
             ],
@@ -297,7 +297,7 @@ function Projects() {
             domains: ["react-native", "javascript"]
         },
         {
-            name: "Meditech Healthcare WebApp",
+            name: "Coffee Cooperative WebApp",
             date: "Nov 2022",
             link: "https://github.com/mwangimuringi/KahawaYetu-Coffee cooperative app",
             description: [
