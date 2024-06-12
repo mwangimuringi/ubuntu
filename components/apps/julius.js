@@ -307,16 +307,16 @@ function Projects() {
         },
         {
             name: "Problem Recommendation System",
-            date: "Sep 2020",
-            link: "https://github.com/vivek9patel/Improve-Codeforces",
+            date: "Sep 2023",
+            link: "https://github.com/mwangimuringi/Improve-Codeforces",
             description: [
-                "Django web application to suggest practice problems from the areas in which the user struggles to get pass in code-forces.",
+                "Spring boot web application to suggest practice problems from the areas in which the user struggles to get pass in code-forces.",
             ],
-            domains: ["django", "python", "codeforces-api", "javascript"]
+            domains: ["spring", "Java", "codeforces-api", "javascript"]
         },
         {
             name: "Cleanliness Automation",
-            date: "Dec 2019",
+            date: "Dec 2022",
             link: "https://github.com/mwangimuringi/CPU-Scheduling-APP-React-Native",
             description: [
                 "Developed Web Applications to automate Garbage collection and extraction systems for SSIP hackathon",
