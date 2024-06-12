@@ -298,8 +298,8 @@ function Projects() {
         },
         {
             name: "Meditech Healthcare WebApp",
-            date: "Nov 2020",
-            link: "https://github.com/vivek9patel/Meditech-Healthcare",
+            date: "Nov 2022",
+            link: "https://github.com/mwangimuringi/KahawaYetu-Coffee cooperative app",
             description: [
                 "Developed Web Application to predict and diagnose diseases from x-ray images.",
             ],
