@@ -1,50 +1,50 @@
 import React, { Component } from "react";
 
 export default class Clock extends Component {
-  constructor() {
-    super();
-    this.month_list = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    this.day_list = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    this.state = {
-      hour_12: true,
-      current_time: new Date(),
-    };
-  }
+    constructor() {
+        super();
+        this.monthList = [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+        ];
+        this.dayList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        this.state = {
+            is12HourFormat: true,
+            currentTime: new Date(),
+        };
+    }
 
-  componentDidMount() {
-    this.update_time = setInterval(() => {
-      this.setState({ current_time: new Date() });
-    }, 10 * 1000);
-  }
+    componentDidMount() {
+        this.updateTimeInterval = setInterval(() => {
+            this.setState({ currentTime: new Date() });
+        }, 10 * 1000);
+    }
 
-  componentWillUnmount() {
-    clearInterval(this.update_time);
-  }
+    componentWillUnmount() {
+        clearInterval(this.updateTimeInterval);
+    }
 
-  render() {
-    const { current_time } = this.state;
-    const day = this.day_list[current_time.getDay()];
-    const hour = current_time.getHours();
-    const minute = current_time.getMinutes();
-    const month = this.month_list[current_time.getMonth()];
-    const date = current_time.getDate();
-    const meridiem = hour < 12 ? "AM" : "PM";
+    render() {
+        const { currentTime } = this.state;
+        const day = this.dayList[currentTime.getDay()];
+        const hour = currentTime.getHours();
+        const minute = currentTime.getMinutes();
+        const month = this.monthList[currentTime.getMonth()];
+        const date = currentTime.getDate();
+        const meridiem = hour < 12 ? "AM" : "PM";
 
-    return (
-      <span>{`${day} ${month} ${date} ${hour}:${minute} ${meridiem}`}</span>
-    );
-  }
+        return (
+            <span>{`${day} ${month} ${date} ${hour}:${minute} ${meridiem}`}</span>
+        );
+    }
 }
