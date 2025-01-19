@@ -46,4 +46,4 @@ export class Calc extends Component {
     $(`#row-calculator-result-${rowId}`).html(result);
     this.appendTerminalRow();
   };
-...
+
