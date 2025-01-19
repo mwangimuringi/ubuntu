@@ -1,54 +1,49 @@
-import React, { Component } from 'react';
-import $ from 'jquery';
-
+...
 export class Calc extends Component {
   constructor() {
     super();
-    this.cursor = "";
-    this.terminalRows = 2;
-    this.state = { terminal: [] };
+    this.prevCommands = [];
+    this.commandsIndex = -1;
+    ...
   }
 
-  componentDidMount() {
-    this.appendTerminalRow();
-  }
+  checkKey = (e) => {
+    const rowId = $(e.target).data('row-id');
+    const command = $(`#calculator-input-${rowId}`).val().trim();
 
-  appendTerminalRow = () => {
-    const terminal = [...this.state.terminal];
-    terminal.push(this.terminalRow(this.terminalRows));
-    this.setState({ terminal });
-    this.terminalRows += 2;
+    if (e.key === 'Enter' && command) {
+      this.prevCommands.push(command);
+      this.commandsIndex = this.prevCommands.length;
+      this.handleCommand(command, rowId);
+    } else if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+      this.navigateCommandHistory(e.key === 'ArrowUp', rowId);
+    }
   };
 
-  terminalRow = (id) => (
-    <React.Fragment key={id}>
-      <div className="flex w-full h-5">
-        <div className="text-ubt-green h-1 mr-2">;</div>
-        <div id="cmd" className="relative flex-1">
-          <span id={`show-calculator-${id}`} className="whitespace-pre pb-1" />
-          <div id={`cursor-${id}`} className="w-1.5 h-3.5 bg-white" />
-          <input
-            id={`calculator-input-${id}`}
-            data-row-id={id}
-            className="absolute top-0 left-0 w-full opacity-0 outline-none"
-            spellCheck={false}
-            autoFocus
-            autoComplete="off"
-            type="text"
-          />
-        </div>
-      </div>
-    </React.Fragment>
-  );
+  navigateCommandHistory = (isUp, rowId) => {
+    this.commandsIndex += isUp ? -1 : 1;
+    this.commandsIndex = Math.min(Math.max(this.commandsIndex, -1), this.prevCommands.length);
 
-  render() {
-    return (
-      <div className="h-full w-full bg-ub-drk-abrgn text-ubt-grey p-1">
-        <div>C-style arbitrary precision calculator</div>
-        <div id="calculator-body">{this.state.terminal}</div>
-      </div>
-    );
-  }
-}
+    const prevCommand = this.commandsIndex < 0 || this.commandsIndex >= this.prevCommands.length
+      ? ''
+      : this.prevCommands[this.commandsIndex];
 
-export default Calc;
+    $(`#calculator-input-${rowId}`).val(prevCommand);
+    $(`#show-calculator-${rowId}`).text(prevCommand);
+  };
+
+  handleCommand = (command, rowId) => {
+    if (command === 'clear') {
+      this.setState({ terminal: [] });
+      this.appendTerminalRow();
+    } else if (command === 'help') {
+      const result = 'Available Commands: clear, help.';
+      this.showResult(rowId, result);
+    }
+  };
+
+  showResult = (rowId, result) => {
+    $(`#row-calculator-result-${rowId}`).html(result);
+    this.appendTerminalRow();
+  };
+...
